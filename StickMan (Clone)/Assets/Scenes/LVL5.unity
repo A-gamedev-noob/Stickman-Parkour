@@ -2042,7 +2042,7 @@ PrefabInstance:
     - target: {fileID: 8068066959929138649, guid: c0086a1d7b905694d88cd52ae44ee179,
         type: 3}
       propertyPath: KControl
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8068066959929138649, guid: c0086a1d7b905694d88cd52ae44ee179,
         type: 3}

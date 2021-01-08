@@ -11,6 +11,7 @@ public class LvlSelectButton : MonoBehaviour
     [SerializeField] Sprite[] _presets;
     [SerializeField] Text _bestTxt;
     [SerializeField] Text _bestTimeTxt;
+    [SerializeField] bool _isInteractable = false;
     public float _targetTime;
 
     void Start()
@@ -40,6 +41,18 @@ public class LvlSelectButton : MonoBehaviour
         }                                                 
     
         GetComponent<Image>().sprite = _presets[rank];
+        if(!_isInteractable)
+        {
+            string PrevLvl = "Completed" + (_Lvl-1);
+            if (PlayerPrefs.GetString(PrevLvl) == "true")
+            {
+                GetComponent<Button>().interactable = true;
+            }
+            else
+            {
+                GetComponent<Button>().interactable = false;
+            }
+        }
     }
 
 }
